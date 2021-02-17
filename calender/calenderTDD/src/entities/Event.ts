@@ -1,24 +1,20 @@
-export interface IEvent {
-    id: number;
-    name: string;
 
+export interface IEvent{
+    id: number;
+    title: string;
+    heureD: Date;
+    heureF: Date;
+    locality: string;
+    description: string;
 }
 
-class Event implements IEvent {
+export class Event implements IEvent{
+    constructor(public id: number,
+        public title: string,
+        public heureD: Date,
+        public heureF: Date,
+        public locality: string,
+        public description: string){
 
-    public id: number;
-    public name: string;
-
-
-    constructor(nameOfUser: string | IEvent, id?: number) {
-        if (typeof nameOfUser === 'string') {
-            this.name = nameOfUser;
-            this.id = id || -1;
-        } else {
-            this.name = nameOfUser.name;
-            this.id = nameOfUser.id;
-        }
     }
 }
-
-export default Event;
