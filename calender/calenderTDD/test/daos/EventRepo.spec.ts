@@ -3,6 +3,7 @@ import  Connection from "../../src/db/connection"
 describe('class EventRepo', ()=> {
     let instance: EventListenerOptions;
     const conn = new Connection();    
+    let cnx;
 
     beforeEach(()=> {
         instance = new EventRepo();
@@ -10,12 +11,14 @@ describe('class EventRepo', ()=> {
 
 
     beforeEach(async () => {
-        await conn.create.query('START TRANSACTION');
+        cnx = await conn.create()
+        
+       await cnx.query('START TRANSACTION');
     });
 
 
     afterEach(async () => {
-        await conn.create.query('ROLLBACK');
+        await cnx.query('ROLLBACK');
     });
 
 
