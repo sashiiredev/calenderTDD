@@ -30,6 +30,6 @@ describe('class EventRepo', ()=> {
      });
 
      it('should add a new event', async () => {
-         await instance.add(new Event('title', ,  , 'locality', 'description'))
+         await instance.add(new Event('title', new Date(2021, 2, 23, 17, 23, 55, 11), new Date(2021, 2, 23, 19, 23, 55, 11), 'locality', 'description'));
      })
 })
