@@ -1,10 +1,10 @@
-import {ECategory} from "../../src/entities/Category";
+import {Category} from "../../src/entities/Category";
 
 describe('class ECategory', () => {
 
-    let instance: ECategory;
+    let instance: Category;
 
     beforeEach(() => {
-        instance = new ECategory("", undefined);
+        instance = new Category("", undefined);
     });
 })
