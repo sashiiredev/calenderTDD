@@ -4,20 +4,18 @@ describe('class EventRepo', ()=> {
     let instance: EventListenerOptions;
     const conn = new Connection();    
 
-    const create = conn.create();
-
     beforeEach(()=> {
         instance = new EventRepo();
      });
 
 
     beforeEach(async () => {
-        await Connection.query('START TRANSACTION');
+        await conn.create.query('START TRANSACTION');
     });
 
 
     afterEach(async () => {
-        await create.query('ROLLBACK');
+        await conn.create.query('ROLLBACK');
     });
 
 
