@@ -1,3 +1,8 @@
+class EventRepo implements EventListenerOptions {
+    findAll() {
+    }
+}
+
 describe('class EventRepo', ()=> {
     let instance: EventListenerOptions;
 
