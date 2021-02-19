@@ -1,7 +1,5 @@
-export class ECategory {
+export class Category {
     constructor(
         public label: string,
-        public id?: number){
-
-    }
+        public id?: number){}
 }
